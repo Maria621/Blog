@@ -60,25 +60,26 @@ function DeletarTema() {
             alert('Erro ao apagar o Tema')
         }
 
-      retornar()
-  }
-  return (
-      <div className='container w-1/3 mx-auto'>
-          <h1 className='text-4xl text-center my-4'>Deletar tema</h1>
+        retornar()
+    }
+    return (
+        <div className='container w-1/3 mx-auto'>
+            <h1 className='text-4xl text-center my-4'>Deletar tema</h1>
 
-          <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o tema a seguir?</p>
+            <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o tema a seguir?</p>
 
-          <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-              <header className='py-2 px-6 bg-blue-600 text-white font-bold text-2xl'>Tema</header>
-      <p className='p-8 text-3xl bg-green-200 h-full'>tema</p>
-      <div className="flex">
-        <button className='text-blue-100 bg-blue-400 hover:bg-blue-900 w-full py-2' >Não</button>
-        <button className='w-full text-green-100 bg-green-400 hover:bg-green-900 flex items-center justify-center' >
-           Sim
-        </button>
-       </div>
-     </div>
-   </div>
-  )
+            <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
+                <header className='py-2 px-6 bg-blue-600 text-white font-bold text-2xl'>Tema</header>
+                <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
+                <div className="flex">
+                    <button className='text-blue-100 bg-blue-400 hover:bg-blue-600 w-full py-2' onClick={retornar}>Não</button>
+                    <button className='w-full text-green-100 bg-green-400 hover:bg-green-600 flex items-center justify-center' onClick={deletarTema}>
+                        Sim
+                    </button>
+                </div>
+            </div>
+        </div>
+    )
 }
+
 export default DeletarTema
