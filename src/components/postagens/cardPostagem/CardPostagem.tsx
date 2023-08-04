@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem'
 
+
 interface CardPostagemProps {
   post: Postagem
 }
@@ -10,11 +11,11 @@ function CardPostagem({post}: CardPostagemProps) {
   return (
     <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
       <div>
-        <div className="flex w-full bg-blue-200 py-2 px-4 items-center gap-4">
+        <div className="flex w-full bg-blue-600  text-white py-2 px-4 items-center gap-4">
           <img src={post.usuario?.foto} className='h-12 rounded-full' alt="" />
           <h3 className='text-lg font-bold text-center uppercase '>{post.usuario?.nome}</h3>
         </div>
-        <div className='p-4 '>
+        <div className='p-4 bg-green-200'>
           <h4 className='text-lg font-semibold uppercase'>{post.titulo}</h4>
           <p>{post.texto}</p>
           <p>Tema: {post.tema?.descricao}</p>
